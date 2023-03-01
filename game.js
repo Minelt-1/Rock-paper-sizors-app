@@ -5,37 +5,45 @@ let sizors = false;
 const result = document.querySelector(".result");
 const botresult = document.querySelector(".botresult");
 const totalresult = document.querySelector(".totalresult");
-// when the user touches (rock paper sizors) then set one of them to true based on what user touched
+const btndiv = document.querySelector(".reset-btn-div")
 
 document.querySelector(".rock").addEventListener("click", () =>{
     rock = true;
     botresultRock()
-    result.innerHTML = "You played Rock"
+    result.innerHTML = "You played Rock";
+    btndiv.style.display = "block";
 }) 
 
 document.querySelector(".paper").addEventListener("click", () =>{
     paper = true;
     botresultPaper()
-   
     result.innerHTML = "You played Paper"
+    btndiv.style.display = "block";
 }) 
 
 document.querySelector(".sizors").addEventListener("click", () =>{
     sizors = true;
     botresultSizors()
-   
     result.innerHTML = "You played Sizors"
+    btndiv.style.display = "block";
 }) 
+
+document.querySelector(".reset-btn").addEventListener("click", () =>{
+    result.innerHTML = "";
+    botresult.innerHTML = "";
+    totalresult.innerHTML = "";
+    btndiv.style.display = "none";
+})
 
 function botresultSizors(){
     const generate = Math.floor(Math.random() * 100);
     
     if (generate < 33.3){
-       botresult.innerHTML = "Rock"
+       botresult.innerHTML = "Computer played Rock"
     }else if (generate < 66.6){
-        botresult.innerHTML = "Paper"
+        botresult.innerHTML = "Computer played Paper"
     }else if (generate < 100){
-        botresult.innerHTML = "Sizors"
+        botresult.innerHTML = "Computer played Sizors"
     }else{
         botresult.innerHTML = "Error"
     }
@@ -55,11 +63,11 @@ function botresultRock(){
     const generate = Math.floor(Math.random() * 100);
     
     if (generate < 33.3){
-       botresult.innerHTML = "Rock"
+       botresult.innerHTML = "Computer played Rock"
     }else if (generate < 66.6){
-        botresult.innerHTML = "Paper"
+        botresult.innerHTML = "Computer played Paper"
     }else if (generate < 100){
-        botresult.innerHTML = "Sizors"
+        botresult.innerHTML = "Computer played Sizors"
     }else{
         botresult.innerHTML = "Error"
     }
@@ -73,16 +81,15 @@ function botresultRock(){
     }
 }
 
-
 function botresultPaper(){
     const generate = Math.floor(Math.random() * 100);
     
     if (generate < 33.3){
-       botresult.innerHTML = "Rock"
+       botresult.innerHTML = "Computer played Rock"
     }else if (generate < 66.6){
-        botresult.innerHTML = "Paper"
+        botresult.innerHTML = "Computer played Paper"
     }else if (generate < 100){
-        botresult.innerHTML = "Sizors"
+        botresult.innerHTML = "Computer played Sizors"
     }else{
         botresult.innerHTML = "Error"
     }

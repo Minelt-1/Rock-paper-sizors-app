@@ -4,17 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div><a href="#" class="rock">Rock</a></div>
-    <div><a href="#" class="paper">Paper</a></div>
-    <div><a href="#" class="sizors">Sizors</a></div>
-    <p class="result"></p>
+    <header>
+        <h2 class="header-heading">Rock</h2>
+        <h2 class="header-heading">Paper</h2>
+        <h2 class="header-heading">Sizors</h2>
+    </header>
 
-    <p class="botresult"></p>
+    <div class="container">
+        <div class="container-div-one">
+        <div class="rock-div container-div play-div">
+            <a href="#" class="rock">
+                <img src="/images/icon-rock.svg" alt="Rock">
+            </a>
+        </div>
 
-    <code class="totalresult"></code>
+        <div class="paper-div container-div play-div">
+            <a href="#" class="paper">
+                <img src="/images/icon-paper.svg" alt="Paper">
+            </a>
+        </div>
+     </div>
+        <div class="sissors-div play-div">
+            <a href="#" class="sizors">
+                <img src="/images/icon-scissors.svg" alt="Sizors">
+            </a>
+
+        </div>
+    </div>
+    <div class="total-result-div">
+
+        <div class="reset-btn-div"><a class="reset-btn" href="#">Reset</a></div>
+
+        <p class="result"></p>
+        <p class="botresult"></p>
+
+        <h2 class="totalresult"></h2>
+    </div>
     <script src="game.js"></script>
 </body>
 </html>
