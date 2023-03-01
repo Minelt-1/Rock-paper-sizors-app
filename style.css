@@ -218,7 +218,7 @@ header{
         display: inline-block;
     }
     body{
-        height: 90vh;
+        height: 100vh;
     }
     .total-result-div, .rules-div-main{
         width: 83%;
@@ -227,7 +227,7 @@ header{
     }
     .total-result-div::after, .rules-div-main::after{
         top: -11rem;
-        height: 90vh;
+        height: 102vh;
         left: -1rem;
     }
     .rules-div{
