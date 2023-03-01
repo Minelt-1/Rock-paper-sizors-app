@@ -5,13 +5,15 @@ let sizors = false;
 const result = document.querySelector(".result");
 const botresult = document.querySelector(".botresult");
 const totalresult = document.querySelector(".totalresult");
-const btndiv = document.querySelector(".reset-btn-div")
+const btndiv = document.querySelector(".reset-btn-div");
+const totalresultdiv = document.querySelector(".total-result-div");
 
 document.querySelector(".rock").addEventListener("click", () =>{
     rock = true;
     botresultRock()
     result.innerHTML = "You played Rock";
     btndiv.style.display = "block";
+    totalresultdiv.style.display = "block";
 }) 
 
 document.querySelector(".paper").addEventListener("click", () =>{
@@ -19,13 +21,15 @@ document.querySelector(".paper").addEventListener("click", () =>{
     botresultPaper()
     result.innerHTML = "You played Paper"
     btndiv.style.display = "block";
+    totalresultdiv.style.display = "block";
 }) 
 
 document.querySelector(".sizors").addEventListener("click", () =>{
     sizors = true;
     botresultSizors()
-    result.innerHTML = "You played Sizors"
+    result.innerHTML = "You played Sissors"
     btndiv.style.display = "block";
+    totalresultdiv.style.display = "block";
 }) 
 
 document.querySelector(".reset-btn").addEventListener("click", () =>{
@@ -33,6 +37,7 @@ document.querySelector(".reset-btn").addEventListener("click", () =>{
     botresult.innerHTML = "";
     totalresult.innerHTML = "";
     btndiv.style.display = "none";
+    totalresultdiv.style.display = "none";
 })
 
 function botresultSizors(){
@@ -43,7 +48,7 @@ function botresultSizors(){
     }else if (generate < 66.6){
         botresult.innerHTML = "Computer played Paper"
     }else if (generate < 100){
-        botresult.innerHTML = "Computer played Sizors"
+        botresult.innerHTML = "Computer played Sissors"
     }else{
         botresult.innerHTML = "Error"
     }
@@ -67,7 +72,7 @@ function botresultRock(){
     }else if (generate < 66.6){
         botresult.innerHTML = "Computer played Paper"
     }else if (generate < 100){
-        botresult.innerHTML = "Computer played Sizors"
+        botresult.innerHTML = "Computer played Sissors"
     }else{
         botresult.innerHTML = "Error"
     }
@@ -89,7 +94,7 @@ function botresultPaper(){
     }else if (generate < 66.6){
         botresult.innerHTML = "Computer played Paper"
     }else if (generate < 100){
-        botresult.innerHTML = "Computer played Sizors"
+        botresult.innerHTML = "Computer played Sissors"
     }else{
         botresult.innerHTML = "Error"
     }

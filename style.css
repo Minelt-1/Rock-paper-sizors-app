@@ -85,10 +85,29 @@ header{
 }
 
 .total-result-div{
-    width: 50%;
+    width: 30%;
     margin: auto;
     text-align: center;
     padding: 1rem;
+    position: absolute;
+    top: 13rem;
+    left: 20rem;
+    background-color: white;
+    border: 3px solid var(--Header-Outline);
+    border-radius: 1rem;
+    display: none;
+    height: 16rem;
+}
+
+.total-result-div::after{
+    content: "";
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: 70vw;
+    position: absolute;
+    top: -18rem;
+    left: -20rem;
+    z-index: -1;
 }
 
 .reset-btn-div{
@@ -112,6 +131,74 @@ header{
     background-color: var(--cyan);
 }
 
+.result, .botresult{
+    color: hsl(237, 49%, 15%);
+}
+
+.totalresult{
+    color: var(--cyan);
+    font-weight: 800;
+}
+
+.rules{
+    margin-left: auto;
+    margin-right: 1rem;
+    display: inline-block;
+    border: 1px solid var(--Header-Outline);
+    color: white;
+    height: 1rem;
+    width: 2.5rem;
+    text-decoration: none;
+    padding: .5rem 2rem;
+    border-radius: .3rem;
+}
+
+.rules:hover, .rules:active{
+    background-color: var(--cyan);
+}
+
+.rules-div{
+    width: 10rem;
+    margin-left:auto;
+}
+
+.rules-div-main h1{
+    color: var(--dark-text);
+}
+
+.rules-div-main{
+    background-color: white;
+    display: none;
+    position: absolute;
+    left: 20rem;
+    padding: 1rem;
+}
+
+.rules-div-main::after{
+    content: "";
+    background-color: rgba(0, 0, 0, .3);
+    width: 100vw;
+    height: 70vw;
+    position: absolute;
+    top: -13rem;
+    left: -20rem;
+    z-index: -1;
+}
+
+.rules-content{
+    display: flex;
+}
+
+.rules-content img{
+    margin-left: auto;
+    width: 3rem;
+    height: 3rem;
+}
+
+.close-btn{
+    cursor: pointer;
+}
+
 @media screen and (max-width: 670px){
     header, .container, .container-div-one{
         width: 100%;
@@ -131,6 +218,22 @@ header{
         display: inline-block;
     }
     body{
-        height: 100vh;
+        height: 90vh;
+    }
+    .total-result-div, .rules-div-main{
+        width: 83%;
+        left: 1rem;
+        top: 11rem;
+    }
+    .total-result-div::after, .rules-div-main::after{
+        top: -11rem;
+        height: 90vh;
+        left: -1rem;
+    }
+    .rules-div{
+        width: 15.7rem;
+    }
+    .rules-div-main > img{
+        margin-left: 1rem;
     }
 }
